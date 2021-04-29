@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+	<title>Prada</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="styles.css">
+
+	<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="dist/css/adminlte.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+	<div class="wrapper">
+
+		<aside class="main-sidebar sidebar-dark-primary elevation-4">
+			<!-- Sidebar -->
+			<div class="sidebar">
+				<!-- Sidebar Menu -->
+				<nav class="mt-2">
+					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+						data-accordion="false">
+						<li class="nav-item">
+							<a href="/create" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p>Add Product</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Sales Details</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/updatestock" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Update Stock</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/deleteproduct" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Delete Product</p>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- /.sidebar-menu -->
+			</div>
+			<!-- /.sidebar -->
+		</aside>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+
+			<section class="content-header"> 
+					<h1 id="i1">PRADA Inventory Management System</h1>
+			</section> 
+
+			<section class="content">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-tools">
+							<div class="aa" style="text-align: center;">
+
+							</div>
+							<h2 style="color: darkred; text-align: center;">Welcome</h2>
+							<p>Prada S.p.A. is an Italian luxury fashion house that was founded in 1913 by Mario
+								Prada.
+								It specializes in leather handbags, travel accessories, shoes, ready-to-wear,
+								perfumes and other accessories.
+							</p>
+							<p>
+								Innovative Silhouttes with Sporty and formal inspirations define the modern charm of
+								the women's footwear line.
+								<br>
+								The men's shoes line includes sneakers, loafers and laced shoes blending sports
+								touches and formal lines.
+
+							</p>
+						</div>
+						<div class="card-body table-responsive p-0" style="height: 400px;">
+							<table class="table table-striped table-head-fixed text-nowrap">
+								<tr>
+									<th style="width: 10%">Product ID</th>
+									<th style="width: 10%">Category</th>
+									<th style="width: 10%">Type</th>
+									<th style="width: 10%">Size</th>
+									<th style="width: 10%">Quantity</th>
+									<th style="width: 10%">Price</th>
+								</tr>
+
+								<tbody>
+									<tr>
+										<% for(var i=0; i<data.length; i++) { %>
+									<tr>
+										<td>
+											<%= data[i].Product_ID %>
+										</td>
+										<td>
+											<%= data[i].Category %>
+										</td>
+										<td>
+											<%= data[i].Type %>
+										</td>
+										<td>
+											<%= data[i].Size %>
+										</td>
+										<td>
+											<div class="progress">
+												<div class="<%= data[i].Quantity>35? 'progress-bar progress-bar-striped progress-bar-animated bg-success' : data[i].Quantity>25? 'progress-bar-striped progress-bar-animated bg-warning':'progress-bar-striped progress-bar-animated bg-danger' %>"
+													role="progressbar" aria-valuemin="0" aria-valuemax="100"
+													aria-valuenow="<%= data[i].Quantity %>"
+													style='width: <%= data[i].Quantity %>%'></div>
+											</div>
+											<%= data[i].Quantity %>
+										</td>
+										<td>₹
+											<%= data[i].Selling_Price %>
+										</td>
+									</tr>
+									<% } %>
+
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+
+</html>

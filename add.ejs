@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<title>Prada</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="dist/css/adminlte.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+	<div class="wrapper">
+
+		<aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+			<!-- Sidebar -->
+			<div class="sidebar">
+				<!-- Sidebar Menu -->
+				<nav class="mt-2">
+					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+						data-accordion="false">
+						<li class="nav-item">
+							<a href="/create" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p>Add Product</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Sales Details</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/updatestock" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Update Stock</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/deleteproduct" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Delete Product</p>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- /.sidebar-menu -->
+			</div>
+			<!-- /.sidebar -->
+		</aside>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+
+			<section class="content-header">
+				<h1 id="i1">Add New Product
+			</section>
+
+			<section class="content">
+				<div class="card">
+					<div class="card-header">
+						<div class="container">
+							<form action="/AddData" method="POST">
+								<label for="">Product_ID: </label>
+								<input type="number" placeholder="Enter Product ID" name="Product_ID"><br>
+
+								<label for="">Product Category: </label>&nbsp;
+								<input type="text" placeholder="Enter category" name="Category"><br>
+
+								<label for="">Type of the Product: </label>&nbsp;
+								<input type="text" placeholder="Enter type" name="Type"><br>
+
+								<label for="">Size: </label>
+								<input type="number" placeholder="Enter size" name="Size"><br>
+
+								<label for="">Quantity: </label>&nbsp;
+								<input type="number" placeholder="Enter quantity" name="Quantity"><br>
+
+								<label for="">Cost Price: </label>&nbsp;
+								<input type="number" placeholder="Enter cost price" name="Cost_Price"><br>
+
+								<label for="">Selling Price: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type="number" placeholder="Enter selling price" name="Selling_Price"><br><br>
+
+								<button type="submit" class="button">Submit</button>
+							</form>
+
+							<a href="/" class="c2">Home Page</a>
+						</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

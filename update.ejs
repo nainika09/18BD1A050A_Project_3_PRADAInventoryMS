@@ -1,0 +1,86 @@
+<html>
+
+<head>
+	<title>Prada</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="dist/css/adminlte.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+	<div class="wrapper">
+
+		<aside class="main-sidebar sidebar-dark-primary elevation-4">
+			<!-- Sidebar -->
+			<div class="sidebar">
+				<!-- Sidebar Menu -->
+				<nav class="mt-2">
+					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+						data-accordion="false">
+						<li class="nav-item">
+							<a href="/create" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p>Add Product</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Sales Details</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/updatestock" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Update Stock</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/deleteproduct" class="nav-link">
+								<i class="nav-icon far fa-circle text-info"></i>
+								<p class="text">Delete Product</p>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- /.sidebar-menu -->
+			</div>
+			<!-- /.sidebar -->
+		</aside>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+
+			<section class="content-header">
+				<h1 id="i1">Update Quantity of a Product</h1>
+			</section>
+
+			<section class="content">
+				<div class="card">
+					<div class="card-header">
+						<div class="container">
+
+							<form action="/update" method="POST">
+								<label for="">Product_ID: </label>&nbsp;
+								<input type="number" placeholder="Enter Product ID" name="Product_ID"><br>
+
+								<label for="">New Stock Quantity: </label>&nbsp;
+								<input type="number" placeholder="Enter quantity" name="Quantity"><br><br>
+
+								<button id="update" class="button">Update</button>
+							</form>
+
+							<a href="/" class="c2">Home Page</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+
+</html>
